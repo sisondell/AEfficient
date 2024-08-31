@@ -1,0 +1,150 @@
+/* View.css */
+
+.image-container {
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+
+.lock-icon-container {
+  position: absolute; 
+  top: 10px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  font-size: 30px; 
+  color: #333; 
+  z-index: 1000; 
+}
+
+.image-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none; 
+  border: none; 
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto; 
+  max-height: 80vh; 
+  object-fit: contain; 
+}
+
+
+.custom-arrow {
+  position: absolute;
+  bottom: 10px;
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.5); 
+  color: white; 
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000; 
+}
+
+.custom-arrow.left {
+  left: 10px; 
+}
+
+.custom-arrow.right {
+  right: 10px; 
+}
+
+
+@media (max-width: 768px) {
+  .carousel-image {
+    max-height: 60vh; 
+  }
+
+  .custom-arrow {
+    font-size: 1.5em; 
+  }
+
+  .lock-icon-container {
+    font-size: 30px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-image {
+    max-height: 50vh; 
+  }
+
+  .custom-arrow {
+    font-size: 1.2em; 
+  }
+
+  .lock-icon-container {
+    font-size: 30px; 
+  }
+}
+
+
+.ask-aerobot-container {
+  position: fixed; 
+  bottom: 30px; 
+  right: 15px; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ask-aerobot-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; 
+  border: none; 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  text-decoration: none;
+  box-shadow: none; 
+  cursor: pointer;
+  animation: pulse 1.5s infinite; 
+}
+
+.ask-aerobot-button img {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 30%;
+  object-fit: contain !important; 
+}
+
+/* Animation for the button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.text-bubble {
+  background-color: #333; 
+  color: white;
+  padding: 15px; 
+  border-radius: 20px; 
+  margin-left: 1px;
+  margin-right: 10px; 
+  font-size: 16px; 
+  position: relative;
+  max-width: 250px; 
+  text-align: center; 
+}
+
+
+.text-bubble::before {
+  content: none;
+}
